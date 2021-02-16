@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 import { useEffect, useState } from 'react';
+
+//componentes
 import Frase from './components/Frase';
 
 /* Styled components */
