@@ -35,10 +35,16 @@ function App () {
 
     // funcion para consultar API
     const consultarAPI = async () => {
-        const api = await fetch( 'https://breaking-bad-quotes.herokuapp.com/v1/quotes' );
-        const frase = await api.json();
-        guardarFrase( frase[ 0 ] );
-        console.log( frase );
+        try {
+
+            const api = await fetch( 'https://breaking-bad-quotes.herokuapp.com/v1/quotes' );
+            const frase = await api.json();
+            guardarFrase( frase[ 0 ] );
+            console.log( frase );
+
+        } catch ( error ) {
+            console.log( error );
+        }
     };
 
 
